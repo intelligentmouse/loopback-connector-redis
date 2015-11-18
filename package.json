@@ -11,7 +11,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "./node_modules/.bin/mocha --growl test/*.test.js",
+    "test-verbose": "./node_modules/.bin/mocha --growl --reporter spec test/*.test.js",
+    "testing": "./node_modules/.bin/mocha --growl --watch test/*.test.js"
   },
   "dependencies": {
     "async": "^0.9.0",
